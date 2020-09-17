@@ -1,0 +1,54 @@
+public class Dog {
+    private String name;
+    private int age;
+    private String color;
+    private double weight;
+    Dog(String name,int age,String color,double weight){
+        this.name=name;
+        this.age=age;
+        this.color=color;
+        this.weight=weight;
+    }
+    public void voice(){
+        System.out.println("Гав-гав");
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public double getWeight() {
+        return weight;
+    }
+
+    @Override
+    public String toString() {
+        return "Dog{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", color='" + color + '\'' +
+                ", weight=" + weight +
+                '}';
+    }
+}
+public class Main {
+    public static void main(String args[]){
+Dog dog1=new Dog("Ralf",12,"Black",12.5);
+        dog1.voice();
+        System.out.println(dog1);
+        Dog dog2=new Dog("Jack",5,"Brown",10);
+        dog2.voice();
+        System.out.println(dog2);
+
+    }
+
+
+}

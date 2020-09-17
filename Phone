@@ -1,0 +1,54 @@
+public class Phone {
+    String number;
+
+    public Phone(String number) {
+        this.number = number;
+
+    }
+
+}
+import java.util.ArrayList;
+
+public class Network {
+    private boolean t;
+    ArrayList<Phone> list1=new ArrayList<Phone>();
+    public void notebook(Phone a){
+   list1.add(a);
+   }
+   public void check(Phone b) {
+
+       if(list1.contains(b)) t=true;
+       else t=false;
+
+   }
+
+    @Override
+    public String toString() {
+        if(t) System.out.println("Телефон существует");
+        else System.out.println("Телефон не существует!!!!");
+        return null;
+    }
+
+
+public void call(){
+    if(t) System.out.println("пип-пип-пип");
+    else System.out.println("Телефон не существует");
+}
+}
+
+
+
+public class Main {
+    public static void main(String args[]){
+      Phone phone1=new Phone("+380-97-952-78-59");
+      Network network1=new Network();
+network1.notebook(phone1);
+network1.check(phone1);
+network1.toString();
+network1.call();
+        Phone phone2=new Phone("+380-97-952-78-54");
+        network1.check(phone2);
+        network1.toString();
+        network1.call();
+    }
+}
